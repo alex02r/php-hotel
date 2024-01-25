@@ -5,3 +5,8 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
