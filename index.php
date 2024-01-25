@@ -84,7 +84,13 @@
                                 <td><?php echo $hotel['vote']; ?></td>
                                 <td><?php echo $hotel['distance_to_center']; ?> km</td>
                                 </tr>
-                            <?php } ?>
+                            <?php } 
+                                if($array_hotel == []){
+                                    ?>
+                                    <tr>
+                                        <td colspan="5"> <?php echo "Nessun risultato trovato" ; ?> </td>
+                                    </tr>
+                                <?php }?>
                         </tbody>
                     </table>
                 </div>
