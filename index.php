@@ -17,8 +17,8 @@
     <main>
         <?php foreach($hotels as $hotel){ ?>
             <h5> <?php echo $hotel['name']; ?> </h5>
-            <p> <?php echo $hotel['name']; ?> </p>
-            <span><?php echo $hotel['name'] ?? 'Parcheggio disponibile' ; ?></span>
+            <p> <?php echo $hotel['description']; ?> </p>
+            <span><?php echo $hotel['parking'] ?? 'Parcheggio disponibile' ; ?></span>
             <span>Voto: <?php echo $hotel['vote']; ?></span>
             <span>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?></span>
             <hr>
