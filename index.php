@@ -11,9 +11,8 @@
     <title>Search Hotel</title>
 </head>
 <body>
-    <header>
-        <h1>Trova il tuo hotel</h1>
-    </header>
+    <?php include __DIR__.'/partials/templates/header.php' ; ?>
+    
     <main>
         <div class="container">
             <div class="row">
@@ -44,5 +43,6 @@
             </div>
         </div>
     </main>
+    <?php include __DIR__.'/partials/templates/footer.php'; ?>
 </body>
 </html>
