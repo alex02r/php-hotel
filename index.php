@@ -26,22 +26,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                </tr>
+                <?php foreach($hotels as $hotel){ ?>
+                    <tr>
+                    <th scope="row"><?php echo $hotel['name']; ?></th>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?> km</td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
-        <?php foreach($hotels as $hotel){ ?>
-            <h5> <?php echo $hotel['name']; ?> </h5>
-            <p> <?php echo $hotel['description']; ?> </p>
-            <span><?php echo $hotel['parking'] ?? 'Parcheggio disponibile'; ?></span>
-            <span>Voto: <?php echo $hotel['vote']; ?></span>
-            <span>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?></span>
-            <hr>
-        <?php } ?>
         
     </main>
 </body>
