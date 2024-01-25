@@ -1,15 +1,29 @@
 <?php
     include __DIR__."/partials/var.php";
 
+    //filtraggio per parcheggio
     $array_hotel = $hotels;
     if(isset($_GET['parking'])){
-        $array_hotel = [];
+        $filter_array = [];
         foreach($hotels as $hotel){
             if($hotel['parking']){
-                $array_hotel[]=$hotel;
+                $filter_array[]=$hotel;
             }
         }
+        $array_hotel = $filter_array;
     }
+
+    //filtraggio per valutazione
+    if (isset($_GET['voto']) && $_GET['voto'] != '') {
+        $filter_array = [];
+        foreach($array_hotel as $hotel){
+            if($hotel['vote'] >= $_GET['voto']){
+                $filter_array[] = $hotel;
+            }
+        }
+        $array_hotel = $filter_array;
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +45,7 @@
                         <div class="d-flex gap-3 align-items-center">
                             Filtra per:
                             <div class="">
-                                <select class="form-select form-select-sm">
+                                <select class="form-select form-select-sm" name="voto" id="select">
                                     <option selected value="">Valutazione</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
