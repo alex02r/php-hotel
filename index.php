@@ -28,9 +28,9 @@
             <div class="row row-gap-3">
                 <div class="col-12">
                     <form action="./index.php">
-                        <div class="d-flex gap-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            Filtra per:
                             <div class="">
-
                                 <select class="form-select form-select-sm">
                                     <option selected value="">Valutazione</option>
                                     <option value="1">1</option>
