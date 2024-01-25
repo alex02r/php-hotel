@@ -1,5 +1,15 @@
 <?php
     include __DIR__."/partials/var.php";
+
+    $array_hotel = $hotels;
+    if(isset($_GET['parking'])){
+        $array_hotel = [];
+        foreach($hotels as $hotel){
+            if($hotel['parking']){
+                $array_hotel[]=$hotel;
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +51,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($hotels as $hotel){ ?>
+                            <?php foreach($array_hotel as $hotel){ ?>
                                 <tr>
                                 <th scope="row"><?php echo $hotel['name']; ?></th>
                                 <td><?php echo $hotel['description']; ?></td>
