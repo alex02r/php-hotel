@@ -14,8 +14,21 @@
     <?php include __DIR__.'/partials/templates/header.php' ; ?>
     
     <main>
-        <div class="container">
-            <div class="row">
+        <div class="container py-5">
+            <div class="row row-gap-3">
+                <div class="col-12">
+                    <form action="./index.php">
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="parking" id="checkbox">
+                                <label class="form-check-label" for="checkbox">
+                                    Parcheggio
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-dark">Filtra</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="col-12">
                     <table class="table">
                         <thead>
