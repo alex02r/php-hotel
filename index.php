@@ -29,6 +29,17 @@
                 <div class="col-12">
                     <form action="./index.php">
                         <div class="d-flex gap-3">
+                            <div class="">
+
+                                <select class="form-select form-select-sm">
+                                    <option selected value="">Valutazione</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="parking" id="checkbox">
                                 <label class="form-check-label" for="checkbox">
